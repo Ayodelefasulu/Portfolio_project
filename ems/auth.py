@@ -13,22 +13,51 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 @bp.route('/register', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':
+        firstname = request.form['firstname']
+        lastname = request.form['lastname']
+        email = request.form['email']
+        phonenumber = request.form['phonenumber']
         username = request.form['username']
         password = request.form['password']
+
         db = get_db()
         error = None
 
-        if not username:
+        if not firstname:
+            error = 'First Name is required.'
+        elif not lastname:
+            error = 'Last Name is required.'
+        elif not email:
+            error = 'Email is required.'
+        elif not phonenumber:
+            error = 'Phone Number is required.'
+        elif not username:
             error = 'Username is required.'
         elif not password:
             error = 'Password is required.'
 
         if error is None:
             try:
-                db.execute("INSERT INTO user (username, password) VLAUES (?, ?)",
-                        (username, generate_password_hash(password)),
+                # Insert into user table
+                db.execute(
+                    "INSERT INTO user (firstname, lastname, email, phonenumber, username, password) VALUES (?, ?, ?, ?, ?, ?)",
+                    (firstname, lastname, email, phonenumber, username, generate_password_hash(password)),
                 )
                 db.commit()
+
+                # Get the user_id of the newly created user
+                user_id = db.execute(
+                    "SELECT id FROM user WHERE username = ?",
+                    (username,)
+                ).fetchone()['id']
+
+                # Insert into profile table
+                db.execute(
+                    "INSERT INTO profile (user_id, firstname, lastname, email, phonenumber) VALUES (?, ?, ?, ?, ?)",
+                    (user_id, firstname, lastname, email, phonenumber),
+                )
+                db.commit()
+
             except db.IntegrityError:
                 error = "User {} is already registered".format(username)
             else:
@@ -56,7 +85,7 @@ def login():
         if error is None:
             session.clear()
             session['user_id'] = user['id']
-            return redirect(url_for('index'))
+            return redirect(url_for('dashboard.index'))
 
         flash(error)
 
@@ -77,7 +106,7 @@ def load_logged_in_user():
 @bp.route('/logout')
 def logout():
     session.clear()
-    return redirect(url_for('index'))
+    return redirect(url_for('auth.login'))
 
 def login_required(view):
     @functools.wraps(view)

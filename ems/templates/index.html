@@ -35,15 +35,12 @@ https://www.tooplate.com/view/2123-simply-amazed
                             <a class="nav-link" href="#section-2"><span class="icn"><i class="fab fa-2x fa-battle-net"></i></span> Pricing</a>
                         </li>
 			<li class="nav-item">
-                            <a class="nav-link" href="#section-4"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Login</a>
+                            <a class="nav-link" href="{{ url_for('auth.login') }}"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Login</a>
                         </li>
 			<li class="nav-item">
-                            <a class="nav-link" href="#section-4"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Register</a>
+                            <a class="nav-link" href="{{ url_for('auth.register') }}"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Register</a>
                         </li>
-			<li class="nav-item">
-                            <a class="nav-link" href="./register"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Register Test</a>
-                        </li>
-                    
+                   
                         <li class="nav-item">
                             <a class="nav-link" href="#section-5"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Contact Us</a>
                         </li>
@@ -51,14 +48,6 @@ https://www.tooplate.com/view/2123-simply-amazed
                 </div>
             </nav>
         </header>
-        
-        <button class="navbar-button collapsed" type="button">
-            <span class="menu_icon">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </span>
-        </button>
         
         <main id="content-box" class="order-first">
             <div class="banner-section section parallax-window" data-parallax="scroll" data-image-src="img/section-1-bg.jpg" id="section-1">
@@ -71,49 +60,7 @@ https://www.tooplate.com/view/2123-simply-amazed
             </div>
         
             
-	    <section class="contact-section section" id="section-4">
-    		<div class="container">
-        	    <div class="row">
-                        <div class="col-lg-6 mb-4 contact-form">
-                            <div class="form tm-contact-item-inner">
-                    		<div class="title">
-                        	    <h3>Register</h3>
-                    	        </div>
-                    		<form action="#" method="POST">
-                        	    <div class="form-group">
-                                    	<input name="username" type="text" class="form-control" placeholder="Username">
-                        	    </div>
-                        	    <div class="form-group">
-                            	        <input name="password" type="text" class="form-control" placeholder="Password">
-                        	    </div>
-                        	    <div class="form-group text-right">
-                            	        <input type="submit" class="btn btn-primary" value="Register">
-                            	    </div>
-                    		</form>
-                            </div>
-            		</div>
-                        <div class="col-lg-6 mb-4 contact-form">
-                            <div class="form tm-contact-item-inner">
-                                <div class="title">
-                                    <h3>Login</h3>
-                                </div>
-                                <form action="#" method="POST">
-                                    <div class="form-group">
-                                        <input name="username" type="text" class="form-control" placeholder="Username">
-                                    </div>
-                                    <div class="form-group">
-                                        <input name="password" type="text" class="form-control" placeholder="Password">
-                                    </div>
-                        	    <div class="form-group text-right">
-                            		<input type="submit" class="btn btn-primary" value="Login">
-                        	    </div>
-                    		</form>
-               		    </div>
-            		</div>
-        	    </div>
-                </div>
-	    </section>
-
+	    
             
 
             <section class="contact-section section" id="section-5">

@@ -52,10 +52,10 @@
                 <div class="navbar-collapse single-page-nav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#section-4"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Login</a>
+                            <a class="nav-link" href="{{ url_for('auth.login') }}"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#section-4"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Register</a>
+                            <a class="nav-link" href="{{ url_for('auth.register') }}"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Register</a>
                         </li>
                     </ul>
                 </div>
@@ -71,11 +71,23 @@
                                 <h3>Register</h3>
                             </div>
                             <form action="#" method="POST">
-                                <div class="form-group">
-                                    <input name="username" type="text" class="form-control" placeholder="Username">
+				<div class="form-group">
+                                   First name <input name="firstname" type="text" class="form-control" placeholder="First name">
+                                </div>
+				<div class="form-group">
+                                   Last name <input name="lastname" type="text" class="form-control" placeholder="Last name">
+                                </div>
+				<div class="form-group">
+                                   Email <input name="email" type="text" class="form-control" placeholder="Email">
+                                </div>
+				<div class="form-group">
+                                   Phone number <input name="phonenumber" type="text" class="form-control" placeholder="Phone number">
                                 </div>
                                 <div class="form-group">
-                                    <input name="password" type="text" class="form-control" placeholder="Password">
+                                   Username <input name="username" type="text" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                   Password <input name="password" type="text" class="form-control" placeholder="Password">
                                 </div>
                                 <div class="form-group text-right">
                                     <input type="submit" class="btn btn-primary" value="Register">

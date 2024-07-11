@@ -1,0 +1,44 @@
+
+<!--
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block header %}
+  <h1>Dashboard</h1>
+{% endblock %}
+
+{% block content %}
+  <div class="sidebar">
+    <ul>
+      <li>Wallet Balance: {{ g.user['wallet_balance'] }}</li>
+      <li><a href="{{ url_for('dashboard.fund_wallet_paystack') }}">Fund Wallet with Paystack</a></li>
+      <li><a href="{{ url_for('dashboard.fund_wallet_atm') }}">Fund Wallet with ATM</a></li>
+      <li><a href="{{ url_for('dashboard.buy_data') }}">Buy Data</a></li>
+      <li><a href="{{ url_for('dashboard.buy_airtime') }}">Buy Airtime</a></li>
+      <li><a href="{{ url_for('dashboard.pay_utility') }}">Utility Payment</a></li>
+      <li><a href="{{ url_for('dashboard.cable_subscription') }}">Cable Subscription</a></li>
+      <li><a href="{{ url_for('dashboard.buy_sell_gift_cards') }}">Buy and Sell Gift Cards</a></li>
+      <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="profile">
+      <img src="{{ profile['avatar'] }}" alt="{{ profile['name'] }}">
+      <h2>{{ profile['name'] }}</h2>
+      <p>Settings: {{ profile['avatar'] }}</p>
+    </div>
+
+    <div class="transaction-history">
+      <h2>Transaction History</h2>
+      <ul>
+        {% for transaction in transactions %}
+          <li>{{ transaction['created'] }} - {{ transaction['type'] }}: ${{ transaction['amount'] }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}
+
+-->

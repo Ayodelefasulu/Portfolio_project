@@ -1,0 +1,61 @@
+from flask import (Blueprint, flash, g, redirect, render_template, request, url_for)
+from werkzeug.exceptions import abort
+from ems.auth import login_required
+from ems.dbase import get_db
+
+bp = Blueprint('dashboard', __name__, url_prefix='/dashboard')
+
+@bp.route('/')
+@login_required
+def index():
+    db = get_db()
+    # Fetch transaction history
+    transactionss = db.execute(
+        'SELECT id, transaction_type, amount, created FROM `transaction` WHERE user_id = ? ORDER BY created DESC',
+        (g.user['id'],)
+    ).fetchall()
+    # Fetch user profile
+    profile = db.execute(
+        'SELECT id, first_name, last_name, email FROM profile WHERE user_id = ?',
+        (g.user['id'],)
+    ).fetchone()
+
+    # Render the dashboard template with the user data
+    return render_template('dashboard/index.html', transactionss=transactionss, profile=profile)
+
+
+@bp.route('/fund_wallet_atm')
+@login_required
+def fund_wallet_atm():
+    # Implement funding wallet with ATM
+    return render_template('dashboard/fund_wallet_atm.html')
+
+@bp.route('/buy_data')
+@login_required
+def buy_data():
+    # Implement buying data
+    return render_template('dashboard/buy_data.html')
+
+@bp.route('/buy_airtime')
+@login_required
+def buy_airtime():
+    # Implement buying airtime
+    return render_template('dashboard/buy_airtime.html')
+
+@bp.route('/pay_utility')
+@login_required
+def pay_utility():
+    # Implement utility payment
+    return render_template('dashboard/pay_utility.html')
+
+@bp.route('/cable_subscription')
+@login_required
+def cable_subscription():
+    # Implement cable subscription
+    return render_template('dashboard/cable_subscription.html')
+
+@bp.route('/buy_sell_gift_cards')
+@login_required
+def buy_sell_gift_cards():
+    # Implement buying and selling gift cards
+    return render_template('dashboard/buy_sell_gift_cards.html')

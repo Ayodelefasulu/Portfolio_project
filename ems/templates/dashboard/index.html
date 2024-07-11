@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <h1>Dashboard</h1>
+        <ul>
+            <li>Welcome, {{ g.user['username'] }}</li>
+            <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <ul>
+            <li>Wallet Balance: $100.00</li>
+            <li><button id="buy-data-btn">Buy Data</button></li>
+            <li><button id="buy-airtime-btn">Buy Airtime</button></li>
+            <li><button id="pay-utility-btn">Pay Utility</button></li>
+            <li><button id="fund-wallet-btn">Fund Wallet</button></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="content">
+            <h2>Transaction History</h2>
+            <!-- Your transaction history goes here -->
+
+            <h2>User Profile</h2>
+            <div>
+                <p>Name: {{ g.user['username'] }}</p>
+                <p>Avatar: <img src="{{ url_for('static', filename='images/avatar.png') }}" alt="Avatar"></p>
+                <!--I will use favicon here instead-->
+                <p>Settings: <a href="{{ url_for('profile.settings') }}">Update Settings</a></p>
+            </div>
+
+            <!-- Forms will be injected here -->
+            <div id="form-container"></div>
+        </section>
+    </main>
+
