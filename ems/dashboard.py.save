@@ -91,6 +91,7 @@ def verify_payment(reference):
     else:
         return 'Verification failed', 400
 """ ************************************************************************ """
+
 # You have to update wallet
 def update_wallet(payment_data):
     user_id = payment_data['metadata']['user_id']

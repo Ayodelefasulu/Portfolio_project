@@ -2,24 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Simply Amazed HTML Template by Tooplate</title>
+    <title>E-mobile Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="fontawesome/css/all.min.css" type="text/css" /> 
-    <link rel="stylesheet" href="css/slick.css" type="text/css" />   
-    <link rel="stylesheet" href="css/tooplate-simply-amazed.css" type="text/css" />
-<!--
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='all.min.css') }}"> 
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='slick.css') }}" >-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='tooplate-simply-amazed.css') }}" >
 
-Tooplate 2123 Simply Amazed
-
-https://www.tooplate.com/view/2123-simply-amazed
-
--->
 </head>
 
-<body>
+<body style="background-image: url('{{ url_for('static', filename='images/section-1-bg.jpg') }}');">
 
 
 
@@ -50,19 +44,177 @@ https://www.tooplate.com/view/2123-simply-amazed
         </header>
         
         <main id="content-box" class="order-first">
-            <div class="banner-section section parallax-window" data-parallax="scroll" data-image-src="img/section-1-bg.jpg" id="section-1">
+            <div class="banner-section section parallax-window" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/section-1-bg.jpg') }}" id="section-1">
                 <div class="container">
                     <div class="item">
-                        <div class="bg-blue-transparent logo-fa"><span><i class="fas fa-2x fa-atom"></i></span> Simply Amazed</div>
-                        <div class="bg-blue-transparent simple"><p>Your simplest HTML template, the most amazing page ever, yet free!</p></div>
+                        <div class="bg-blue-transparent logo-fa"><span><i class="fas fa-2x fa-atom"></i></span> Simply Amazing Offers</div>
+                        <div class="bg-blue-transparent simple"><p>Your reliable plug for your mobile services</p></div>
                     </div>
                 </div>
             </div>
-        
-            
+
+
+            <section id="header" style="background-size: cover; padding: 50px 0px; box-shadow: inset -800px 218px 1000px #f7f6f5;">
+        <div class="my-lg-4 pb-lg-5" id="loading-cover" style="padding-top: 80px; filter: none;"></div>
+        <div _ngcontent-c6="" class="container">
+            <!-- <div _ngcontent-c6="" class="row"></div> -->
+            <div _ngcontent-c6="" class="row">
+                <div _ngcontent-c6="" class="col-md-12 banner-text rf-m-t-15" style="margin-top: 0px;">
+                    <!---->
+                    <div _ngcontent-c6="" class="row ng-star-inserted mb-lg-5">
+                        <div class="order-1 order-md-2 order-lg-0 col-lg-5 col-sm-12 quick-links-summary">
+                            <h1 _ngcontent-c6="" class="text-left section-header text-md-center text-lg-left">
+                                <span _ngcontent-c6="" class="bold-text" style="font-size: 40px; line-height: 60px;">The Best Platform for Automated Mobile Services</span>
+                                <br><small style="font-size: 17px;line-height: 0px;" class="d-sm-none">We offer instant recharge of Airtime, Databundle, CableTV (DStv, GOtv &amp; Startimes), Electricity Bill Payment and more</small>
+                            </h1>
+                            <a _ngcontent-c6="" class="btn remita-orange-bg btn-rounded text-white remita-orange-shadow sign-up-btn" href="{{ url_for('auth.login') }}">Sign In to Account <i _ngcontent-c6="" aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
+                        </div>
+
+                        <div class="order-0 order-md-0 col-lg-6 order-lg-1 col-sm-12 ml-lg-5">
+                            <div _ngcontent-c6="" class="row">
+                                <!---->
+                                <div _ngcontent-c6="" class="col-lg-3 col-md-3 col-6 text-center m-b-20 rf-item ng-star-inserted mb-5">
+                                    <div _ngcontent-c6="" class="quick-link-wrapper d-flex justify-content-center">
+                                        <div _ngcontent-c6="" class="feature wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight; position: relative;">
+                                            <!---->
+                                           <!-- <span _ngcontent-c6="" class="badge badge-success feature-label ng-star-inserted">AUTOMATED</span>
+					    <span _ngcontent-c6="" style="color: #356ba2;" class="badge badge-success feature-label ng-star-inserted">AUTOMATED</span>-->
+                                            <div _ngcontent-c6="" class="rf-icon">
+                                                <div _ngcontent-c6="" class="oval-bg">
+                                                    <a href="{{ url_for('auth.login') }}">
+                                                        <img src="{{ url_for('static', filename='images/buy_airtime.svg') }}" class="d-none d-md-inline-flex  ">
+                                                        <img src="{{ url_for('static', filename='images/buy_airtime.svg') }}" class="d-md-none  ">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Buy Airtime</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-c6="" class="col-lg-3 col-md-3 col-6 text-center m-b-20 rf-item ng-star-inserted mb-5">
+                                    <div _ngcontent-c6="" class="quick-link-wrapper d-flex justify-content-center">
+                                        <div _ngcontent-c6="" class="feature wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight; position: relative;">
+                                            <!---->
+                                            <div _ngcontent-c6="" class="rf-icon">
+                                                <div _ngcontent-c6="" class="oval-bg">
+                                                    <a href="{{ url_for('auth.login') }}">
+                                                        <img _ngcontent-c6="" src="{{ url_for('static', filename='images/buy_data.svg') }}" class="d-none d-md-inline-flex ">
+                                                        <img _ngcontent-c6="" src="{{ url_for('static', filename='images/buy_data.svg') }}" class="d-md-none  ">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Buy Data</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-c6="" class="col-lg-3 col-md-3 col-6 text-center m-b-20 rf-item ng-star-inserted mb-5">
+                                    <div _ngcontent-c6="" class="quick-link-wrapper d-flex justify-content-center">
+                                        <div _ngcontent-c6="" class="feature wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight; position: relative;">
+                                            <!---->
+                                            <div _ngcontent-c6="" class="rf-icon">
+                                                <div _ngcontent-c6="" class="oval-bg">
+                                                    <a href="{{ url_for('auth.login') }}">
+                                                        <img _ngcontent-c6="" src="{{ url_for('static', filename='images/buy_electricity.svg') }}" class="d-none d-md-inline-flex ">
+                                                        <img _ngcontent-c6="" src="{{ url_for('static', filename='images/buy_electricity.svg') }}" class="d-md-none ">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #36383a;">Buy Electricity</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-c6="" class="col-lg-3 col-md-3 col-6 text-center m-b-20 rf-item ng-star-inserted mb-5">
+                                    <div _ngcontent-c6="" class="quick-link-wrapper d-flex justify-content-center">
+                                        <div _ngcontent-c6="" class="feature wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight; position: relative;">
+                                            <!---->
+                                            <div _ngcontent-c6="" class="rf-icon">
+                                                <div _ngcontent-c6="" class="oval-bg">
+                                                    <a href="{{ url_for('auth.login') }}">
+                                                        <img _ngcontent-c6="" src="{{ url_for('static', filename='images/pay_cable.svg') }}" class="d-none d-md-inline-flex  ">
+                                                        <img _ngcontent-c6="" src="{{ url_for('static', filename='images/pay_cable.svg') }}" class="d-md-none  ">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Cable TV</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div _ngcontent-c6="" class="col-lg-3 col-md-3 col-6 text-center m-b-20 rf-item ng-star-inserted mb-5">
+                                    <div _ngcontent-c6="" class="quick-link-wrapper d-flex justify-content-center">
+                                        <div _ngcontent-c6="" class="feature wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight; position: relative;">
+                                            <!---->
+                                            <div _ngcontent-c6="" class="rf-icon">
+                                                <div _ngcontent-c6="" class="oval-bg">
+                                                    <a href="{{ url_for('auth.login') }}">
+                                                        <img _ngcontent-c6="" src="{{ url_for('static', filename='images/pay_bills.svg') }}" class="d-none d-md-inline-flex  ">
+                                                        <img _ngcontent-c6="" src="{{ url_for('static', filename='images/pay_bills.svg') }}" class="d-md-none  ">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Wallet <br>Summary</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div _ngcontent-c6="" class="col-lg-3 col-md-3 col-6 text-center m-b-20 rf-item ng-star-inserted mb-5">
+                                    <div _ngcontent-c6="" class="quick-link-wrapper d-flex justify-content-center">
+                                        <div _ngcontent-c6="" class="feature wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight; position: relative;">
+                                            <!---->
+                                            <div _ngcontent-c6="" class="rf-icon">
+                                                <div _ngcontent-c6="" class="oval-bg">
+                                                    <a href="{{ url_for('auth.login') }}">
+                                                        <i class="fa fa-code" style="font-size: 24px; color: #c12dd1;" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Developer's<br> API</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div _ngcontent-c6="" class="col-lg-3 col-md-3 col-6 text-center m-b-20 rf-item ng-star-inserted mb-5">
+                                    <div _ngcontent-c6="" class="quick-link-wrapper d-flex justify-content-center">
+                                        <div _ngcontent-c6="" class="feature wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight; position: relative;">
+                                            <!---->
+                                            <div _ngcontent-c6="" class="rf-icon">
+                                                <div _ngcontent-c6="" class="oval-bg">
+                                                    <a href="/profile">
+                                                        <i class="fa fa-comments" style="font-size: 24px; color: #c12dd1;" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Bulk <br> SMS</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div _ngcontent-c6="" class="col-lg-3 col-md-3 col-6 text-center m-b-20 rf-item ng-star-inserted mb-5">
+                                    <div _ngcontent-c6="" class="quick-link-wrapper d-flex justify-content-center">
+                                        <div _ngcontent-c6="" class="feature wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight; position: relative;">
+                                            <!---->
+                                            <div _ngcontent-c6="" class="rf-icon">
+                                                <div _ngcontent-c6="" class="oval-bg">
+                                                    <a href="/profile">
+                                                        <i class="fa fa-print" style="font-size: 24px; color: #c12dd1;" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Recharge Card <br> Printing</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+        </div>
+    </section>
 	    
             
-
             <section class="contact-section section" id="section-5">
                 <div class="container">
                     <div class="title">
@@ -127,11 +279,11 @@ https://www.tooplate.com/view/2123-simply-amazed
             </section>
         </main>
     </div>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.singlePageNav.min.js"></script>
-    <script src="js/slick.js"></script>
-    <script src="js/parallax.min.js"></script>
-    <script src="js/templatemo-script.js"></script>
+    <!--<script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>-->
+   <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/slick.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/parallax.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script>-->-->
 </body>
 </html>

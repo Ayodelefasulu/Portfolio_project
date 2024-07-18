@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}" >
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" > -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='tooplate-simply-amazed.css') }}" >
 </head>
 <body>
     <nav>
@@ -18,10 +20,13 @@
     <aside>
         <ul>
             <li>Wallet Balance: $100.00</li>
-            <li><button id="buy-data-btn">Buy Data</button></li>
-            <li><button id="buy-airtime-btn">Buy Airtime</button></li>
-            <li><button id="pay-utility-btn">Pay Utility</button></li>
-            <li><button id="fund-wallet-btn">Fund Wallet</button></li>
+            <li><a href="{{ url_for('dashboard.buy_data') }}">Buy Data</a></li>
+            <li><a href="{{ url_for('dashboard.buy_airtime') }}">Buy Airtime</a></li>
+            <li><a href="{{ url_for('dashboard.pay_utility') }}">Utility Payment</a></li>
+            <li><a href="{{ url_for('dashboard.cable_subscription') }}">Cable Subscription</a></li>
+            <li><a href="{{ url_for('dashboard.buy_sell_giftcards') }}">Buy and Sell Gift Cards</a></li>
+            <li><a href="{{ url_for('dashboard.fund_wallet_paystack') }}">Fund Wallet with Paystack</a></li>
+            <li><a href="{{ url_for('dashboard.fund_wallet_atm') }}">Fund Wallet with ATM</a></li>
         </ul>
     </aside>
 

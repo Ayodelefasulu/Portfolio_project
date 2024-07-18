@@ -1,6 +1,6 @@
 """
-In this module, connection is made to the database
-without connecting to the database, queries, requests to
+In this module, connection is made to the database.
+Without connecting to the database, queries, requests to
 the database cannot work
 
 The connection is usually tied to requests,
