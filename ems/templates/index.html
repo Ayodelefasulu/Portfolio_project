@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='all.min.css') }}"> 
     <!--<link rel="stylesheet" href="{{ url_for('static', filename='slick.css') }}" >-->
     <link rel="stylesheet" href="{{ url_for('static', filename='tooplate-simply-amazed.css') }}" >
-
+    <script src="https://kit.fontawesome.com/f18030f577.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body style="background-image: url('{{ url_for('static', filename='images/section-1-bg.jpg') }}');">
@@ -29,10 +30,10 @@
                             <a class="nav-link" href="#section-2"><span class="icn"><i class="fab fa-2x fa-battle-net"></i></span> Pricing</a>
                         </li>
 			<li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('auth.login') }}"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Login</a>
+                            <a class="nav-link" href="{{ url_for('auth.login') }}"><span class="icn"><i class="fas fa-2x fa-sign-in-alt"></i></span> Login</a>
                         </li>
 			<li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('auth.register') }}"><span class="icn"><i class="far fa-2x fa-comments"></i></span> Register</a>
+                            <a class="nav-link" href="{{ url_for('auth.register') }}"><span class="icn"><i class="fas fa-2x fa-user-plus"></i></span> Register</a>
                         </li>
                    
                         <li class="nav-item">
@@ -67,7 +68,7 @@
                                 <span _ngcontent-c6="" class="bold-text" style="font-size: 40px; line-height: 60px;">The Best Platform for Automated Mobile Services</span>
                                 <br><small style="font-size: 17px;line-height: 0px;" class="d-sm-none">We offer instant recharge of Airtime, Databundle, CableTV (DStv, GOtv &amp; Startimes), Electricity Bill Payment and more</small>
                             </h1>
-                            <a _ngcontent-c6="" class="btn remita-orange-bg btn-rounded text-white remita-orange-shadow sign-up-btn" href="{{ url_for('auth.login') }}">Sign In to Account <i _ngcontent-c6="" aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
+                            <a _ngcontent-c6="" style="color: #283ff3;" class="btn remita-orange-bg btn-rounded remita-orange-shadow sign-up-btn" href="{{ url_for('auth.login') }}">Sign In to Account <i _ngcontent-c6="" aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                         </div>
 
                         <div class="order-0 order-md-0 col-lg-6 order-lg-1 col-sm-12 ml-lg-5">
@@ -87,7 +88,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Buy Airtime</a> </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="{{ url_for('auth.login') }}" style="color: #212529;">Buy Airtime</a> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +104,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Buy Data</a> </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="{{ url_for('auth.login') }}" style="color: #212529;">Buy Data</a> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -119,7 +120,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #36383a;">Buy Electricity</a> </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="{{ url_for('auth.login') }}" style="color: #36383a;">Buy Electricity</a> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -135,7 +136,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Cable TV</a> </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="{{ url_for('auth.login') }}" style="color: #212529;">Cable TV</a> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -151,7 +152,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Wallet <br>Summary</a> </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="{{ url_for('auth.login') }}" style="color: #212529;">Wallet <br>Summary</a> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -167,7 +168,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Developer's<br> API</a> </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="{{ url_for('auth.login') }}" style="color: #212529;">Developer's<br> API</a> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -178,12 +179,12 @@
                                             <!---->
                                             <div _ngcontent-c6="" class="rf-icon">
                                                 <div _ngcontent-c6="" class="oval-bg">
-                                                    <a href="/profile">
+                                                    <a href="{{ url_for('auth.login') }}">
                                                         <i class="fa fa-comments" style="font-size: 24px; color: #c12dd1;" aria-hidden="true"></i>
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Bulk <br> SMS</a> </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="{{ url_for('auth.login') }}" style="color: #212529;">Bulk <br> SMS</a> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -194,12 +195,12 @@
                                             <!---->
                                             <div _ngcontent-c6="" class="rf-icon">
                                                 <div _ngcontent-c6="" class="oval-bg">
-                                                    <a href="/profile">
+                                                    <a href="{{ url_for('auth.login') }}">
                                                         <i class="fa fa-print" style="font-size: 24px; color: #c12dd1;" aria-hidden="true"></i>
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="/profile" style="color: #212529;">Recharge Card <br> Printing</a> </div>
+                                            <div _ngcontent-c6="" class="rf-desc mt-3 mb-1 text-truncate text-center"> <a href="{{ url_for('auth.login') }}" style="color: #212529;">Recharge Card <br> Printing</a> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -213,6 +214,50 @@
             </div>
         </div>
     </section>
+
+    <div class="row align-items-center m-0">
+                    <div class="col-sm-12 col-md-12 col-lg-6 p-30 order-2 order-lg-1">
+                        <div class="home-facility-overview desk-ml-auto pr-20 pl-20 pb-30">
+                            <h3 class="home-about-title p-20">
+                                Why Choose Us?
+                            </h3>
+                            <p class="home-about-para">We offer instant recharge of Airtime, Databundle, CableTV (DStv, GOtv &amp; Startimes), Electricity Bill Payment and more.</p>
+                            <div class="home-about-list" style="margin: 20px;">
+                                <div class="home-about-list-item">
+                                    <img src="{{ url_for('static', filename='images/check.png') }}" alt="checl"> We're Fast
+                                </div>
+                                <div class="home-about-list-item">
+                                    <img src="{{ url_for('static', filename='images/check.png') }}" alt="checl"> Automated Services
+                                </div>
+                                <div class="home-about-list-item">
+                                    <img src="{{ url_for('static', filename='images/check.png') }}" alt="checl"> 100% Secured
+                                </div>
+                                <div class="home-about-list-item">
+                                    <img src="{{ url_for('static', filename='images/check.png') }}" alt="checl"> We're Reliable
+                                </div>
+                                <div class="home-about-list-item">
+                                    <img src="{{ url_for('static', filename='images/check.png') }}" alt="checl"> Always Online
+                                </div>
+                                <div class="home-about-list-item">
+                                    <img src="{{ url_for('static', filename='images/check.png') }}" alt="checl"> 24/7 Customer Support
+                                </div>
+                            </div>
+                           <!-- <div class="home-about-animation">
+                                <div class="home-animation-item">
+                                    <img src="{{ url_for('static', filename='images/curve-line.png') }}" alt="animated-icon">
+                                </div>
+                                <div class="home-animation-item">
+                                    <img src="{{ url_for('static', filename='images/triangle.png') }}" alt="animated-icon">
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 p-40 order-1 order-lg-2">
+                        <div class="home-facility-item img-right-res pb-30">
+                            <img src="{{ url_for('static', filename='images/portfolio-img4.jpg') }}" style="border-radius: 160px;">
+                        </div>
+                    </div>
+           </div>
 	    
             
             <section class="contact-section section" id="section-5">
