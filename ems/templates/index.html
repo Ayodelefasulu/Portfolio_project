@@ -71,6 +71,7 @@
                             </h1>
                             <a _ngcontent-c6="" style="color: #283ff3;" class="btn remita-orange-bg btn-rounded remita-orange-shadow sign-up-btn" href="{{ url_for('auth.login') }}">Sign In to Account <i _ngcontent-c6="" aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
                         </div>
+			<p class="text-center" style="font-size: 2.5rem; font-family: Source Sans Pro, Arial, sans-serif; font-weight: 300; color: #0c0101;">Pay Bills on the Go</p>
 
                         <div class="order-0 order-md-0 col-lg-6 order-lg-1 col-sm-12 ml-lg-5">
                             <div _ngcontent-c6="" class="row">
@@ -316,13 +317,57 @@
                         </div>
                     </div>                
                 </div>
-                <footer class="footer container container-2">
-                    <div class="row"> 
-                        <p class="col-sm-7">Copyright 2021 Simply Amazed Co.</p>
-                        <p class="col-sm-5 text-right design">Design: <a rel="nofollow" href="https://www.tooplate.com" target="_parent">Tooplate</a></p>
-                    </div>
-                </footer>
+                
             </section>
+	    <section class="contact-section section">
+		<footer class="footer section bg-dark small-text" id="section-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+                            <div class="footer-item">
+                                <h4 class="text-white mb-3">Our Mission</h4>
+                                <p class="text-muted">To become a leading provider of mobile service solutions by delivering an exceptional customer experience through innovative products and services.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-2 mb-4 mb-md-0">
+                            <div class="footer-item">
+                                <h4 class="text-white mb-3">Quick Links</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#section-1" class="text-muted">Our Company</a></li>
+                                    <li><a href="#section-2" class="text-muted">Pricing</a></li>
+                                    <li><a href="{{ url_for('auth.login') }}" class="text-muted">Login</a></li>
+                                    <li><a href="{{ url_for('auth.register') }}" class="text-muted">Register</a></li>
+                                    <li><a href="#section-5" class="text-muted">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                            <div class="footer-item">
+                                <h4 class="text-white mb-3">Contact Us</h4>
+                                <p class="text-muted">123 Main Street, Anytown, USA</p>
+                                <p class="text-muted">Phone: (123) 456-7890</p>
+                                <p class="text-muted">Email: support@emobileservices.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                            <div class="footer-item">
+                                <h4 class="text-white mb-3">Follow Us</h4>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a href="#" class="text-muted"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li class="list-inline-item"><a href="#" class="text-muted"><i class="fab fa-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="#" class="text-muted"><i class="fab fa-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="#" class="text-muted"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-muted mt-4">
+                    &copy; 2024 E-mobile Services. All Rights Reserved.
+                </div>
+            </footer>
+  	    <section/>
+
         </main>
     </div>
     <!--<script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>-->
@@ -330,6 +375,6 @@
     <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>
    <script src="{{ url_for('static', filename='js/slick.js') }}"></script>
   <script src="{{ url_for('static', filename='js/parallax.min.js') }}"></script>
-   <script src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script>-->-->
+   <script src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script>
 </body>
 </html>

@@ -1066,7 +1066,7 @@ figure.effect-julia:hover p {
   .contact-section { position: relative; }
 
   .footer {
-    position: absolute;
+   /* position: absolute;*/
     bottom: 0;
     left: 60px;
   }
@@ -1113,8 +1113,8 @@ figure.effect-julia:hover p {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .banner-section { padding-top: 0; }
