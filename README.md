@@ -110,7 +110,7 @@ The idea for EMS was born from my own frustrations with managing multiple mobile
 1. **Clone the Repository:**
     ```bash
     git clone https://github.com/Ayodelefasulu/Portfolio_project.git
-    cd your-repo-name
+    cd Portfolio_project
     ```
 
 2. **Install Dependencies:**
