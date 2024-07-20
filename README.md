@@ -9,7 +9,7 @@ Briefly introduce your project. Explain what it does, its purpose, and why it's 
   - [Author 1](https://www.linkedin.com/in/ayodelefasulu)
  
 ## Description
-![Description](ems/static/image/portfolio-img4.jpg)
+![Description](ems/static/images/portfolio-img4.jpg)
 
 
 ## Installation
