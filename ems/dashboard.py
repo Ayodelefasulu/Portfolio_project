@@ -6,7 +6,7 @@ import requests
 
 bp = Blueprint('dashboard', __name__, url_prefix='/dashboard')
 
-# Paystack secret and api keys
+# Paystack secret and public api keys
 PAYSTACK_PUBLIC_KEY = 'pk_test_dc6aa3d710e6cbbc56cd6918f406c328cb179ada'
 #PAYSTACK_SECRET_KEY = 'sk_test_DEFAULT'
 PAYSTACK_SECRET_KEY = 'sk_test_8e37fbd0c795e4a2a5fb64a6b703222de9680856'
@@ -22,7 +22,7 @@ def index():
     ).fetchall()
     # Fetch user profile
     profile = db.execute(
-        'SELECT id, first_name, last_name, email FROM profile WHERE user_id = ?',
+        'SELECT id, firstname, lastname, email FROM profile WHERE user_id = ?',
         (g.user['id'],)
     ).fetchone()
 
@@ -39,6 +39,11 @@ def fund_wallet_paystack():
 @bp.route('/fund_wallet_paystack', methods=('GET', 'POST'))
 @login_required
 def post_fund_wallet_paystack():
+    """ User enters email and amount to be fund in the form
+        the header is submited in addtion to his data.
+        User is redirected to paystack's payment page and upon
+        successful/failed payment, paystack displays the status"""
+
     if request.method == 'POST':
         email = request.form['email']
         amount = int(request.form['amount']) * 100
@@ -65,6 +70,8 @@ def post_fund_wallet_paystack():
 # Paystack webhook route
 @bp.route('/payment/verify', methods=['POST'])
 def paystack_webhook():
+    """ This function handles payment verifcation by redirecting 
+        to web server """
     data = request.get_json()
 
     if data['event'] == 'charge.success':

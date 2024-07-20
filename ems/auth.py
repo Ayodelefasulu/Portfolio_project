@@ -1,3 +1,5 @@
+""" This is the authentication blueprint. It consists of the user registration, login and logout """
+
 import functools
 
 from flask import (Blueprint, flash, g, redirect,
@@ -12,6 +14,7 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 
 @bp.route('/register', methods=('GET', 'POST'))
 def register():
+    # gets all the form data
     if request.method == 'POST':
         firstname = request.form['firstname']
         lastname = request.form['lastname']
@@ -23,6 +26,7 @@ def register():
         db = get_db()
         error = None
 
+        # validates form
         if not firstname:
             error = 'First Name is required.'
         elif not lastname:
@@ -63,17 +67,21 @@ def register():
             else:
                 return redirect(url_for("auth.login"))
 
+        # responsible for flashing error messages
         flash(error)
 
     return render_template('auth/register.html')
 
 @bp.route('/login', methods=('GET', 'POST'))
 def login():
+    # gets all form data
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
         db = get_db()
         error = None
+
+        # verifies if user already exists in the database
         user = db.execute('SELECT * FROM user WHERE username = ?',
                        (username,)).fetchone()
 
@@ -93,6 +101,7 @@ def login():
 
 @bp.before_app_request
 def load_logged_in_user():
+    # checks if a user id is stored in the session and gets that user’s data from the database
     user_id = session.get('user_id')
 
     if user_id is None:
@@ -105,7 +114,7 @@ def load_logged_in_user():
 
 @bp.route('/logout')
 def logout():
-    session.clear()
+    session.clear() # To log out, it removes the user id from the session
     return redirect(url_for('auth.login'))
 
 def login_required(view):

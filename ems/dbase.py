@@ -5,7 +5,7 @@ the database cannot work
 
 The connection is usually tied to requests,
 each time request is made,
-connection is made then close before the request is sent
+connection is made then closed before the request is sent
 """
 
 import sqlite3
@@ -16,6 +16,7 @@ from flask import current_app, g
 
 
 def get_db():
+    """ This functino is responsible for making connection to database """
     if 'db' not in g:
         g.db = sqlite3.connect(
             current_app.config['DATABASE'],
@@ -27,6 +28,7 @@ def get_db():
 
 
 def close_db(e=None):
+    """ This is responsible for closing the database """
     db = g.pop('db', None)
 
     if db is not None:

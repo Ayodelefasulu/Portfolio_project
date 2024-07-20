@@ -1,8 +1,4 @@
-const mustRegister = 3;
-
-
-
-
+/* This script describes the payment with the paystack API. */
 
 
 const paymentForm = document.getElementById('paymentForm');
@@ -10,7 +6,7 @@ paymentForm.addEventListener("submit", payWithPaystack, false);
 
 function payWithPaystack(e) {
   e.preventDefault();
-
+s
   let handler = PaystackPop.setup({
     key: 'pk_test_dc6aa3d710e6cbbc56cd6918f406c328cb179ada',
     email: document.getElementById("email").value,

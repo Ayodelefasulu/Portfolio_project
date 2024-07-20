@@ -1,3 +1,5 @@
+""" This is the application factory where the major engine resides """
+
 import os
 
 from flask import Flask, render_template
@@ -29,16 +31,20 @@ def create_app(test_config=None):
     def hello():
         return render_template('index.html')
 
+    # database configurations and definitions are register here
     from . import dbase
     dbase.init_app(app)
 
+    # this is the authentication blueprint being register here
     from . import auth
     app.register_blueprint(auth.bp)
 
+    # blueprint for the dashboard registered here
     from . import dashboard
     app.register_blueprint(dashboard.bp)
     app.add_url_rule('/dashboard', endpoint='dashboard_index')
 
+    # profile blueprint being registered here
     from . import profile
     app.register_blueprint(profile.bp)
 
