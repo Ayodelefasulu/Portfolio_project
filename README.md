@@ -6,7 +6,7 @@ Briefly introduce your project. Explain what it does, its purpose, and why it's 
 - **Deployed Site:** (http://ayodelefasulu.github.io)
 - **Final Project Blog Article:** (http://.com)
 - **Author(s) LinkedIn:**
-  - [Author 1](https://www.linkedin.com/in/ayodelefasulu)
+  - [Ayodele Fasulu](https://www.linkedin.com/in/ayodelefasulu)
  
 ## Description
 ### Why Choose Us?
