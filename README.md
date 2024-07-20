@@ -21,12 +21,30 @@ We offer instant recharge of Airtime, Databundle, CableTV (DStv, GOtv & Startime
 Provide a step-by-step guide on how to install and set up your project. Include prerequisites, setup commands, and any configuration needed.
 
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/Ayodelefasulu/Portfolio_project.git
 
-# Navigate into the project directory
+### Navigate into the project directory
 cd Portfolio_project
 
-# Install dependencies
+### Install dependencies
+pip install virtualev
+
+### Create new virtual environment
+virtualenv myenv
+
+### Activate virtual environment
+source myenv/bin/activate
+(on windows, use myenv\Script\activate)
+
+### Install requests
+pip install requests
+
+### Install flask
+pip install flask
+
+### Verify installation
+python -c 'import requests; print(requests.__version__)"
+python -c 'from flask import __version__; print(__version__)'
 
 
