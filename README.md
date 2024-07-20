@@ -44,7 +44,8 @@ pip install requests
 pip install flask
 
 ### Verify installation
-python -c 'import requests; print(requests.__version__)"
+'''python -c 'import requests; print(requests.__version__)"
 python -c 'from flask import __version__; print(__version__)'
+'''
 
 
