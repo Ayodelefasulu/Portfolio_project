@@ -7,6 +7,10 @@ Briefly introduce your project. Explain what it does, its purpose, and why it's 
 - **Final Project Blog Article:** (http://.com)
 - **Author(s) LinkedIn:**
   - [Author 1](https://www.linkedin.com/in/ayodelefasulu)
+ 
+## Description
+![Description](ems/static/image/portfolio-img4.jpg)
+
 
 ## Installation
 Provide a step-by-step guide on how to install and set up your project. Include prerequisites, setup commands, and any configuration needed.
