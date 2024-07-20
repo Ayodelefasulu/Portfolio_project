@@ -9,7 +9,11 @@ Briefly introduce your project. Explain what it does, its purpose, and why it's 
   - [Author 1](https://www.linkedin.com/in/ayodelefasulu)
  
 ## Description
+### Why Choose Us?
+We offer instant recharge of Airtime, Databundle, CableTV (DStv, GOtv & Startimes), Electricity Bill Payment and more.
 ![Description](ems/static/images/portfolio-img4.jpg)
+![Description](landing_page.png)
+
 
 
 ## Installation
